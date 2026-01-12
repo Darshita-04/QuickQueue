@@ -27,14 +27,13 @@ const UserForm = () => {
   };
 
   return (
-    <div style={{ padding: 30 }}>
-      <h2>Enter Your Details</h2>
+    <div className="form-container">
+      <h2>Quick Check-In</h2>
+      <p>Just a few details to reserve your spot in the queue.</p>
       <form onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" onChange={handleChange} required />
-        <br /><br />
-        <input name="phone" placeholder="Phone" onChange={handleChange} required />
-        <br /><br />
-        <button>Join Queue</button>
+        <input name="name" className="input-box" placeholder="Name" onChange={handleChange} required />
+        <input name="phone" className="input-box" placeholder="Phone" onChange={handleChange} required />
+        <button className="btn-join">Join Queue</button>
       </form>
     </div>
   );

@@ -7,7 +7,7 @@ const ThankYou = () => {
   const position = queue.findIndex(u => u.id === Number(userId));
 
   return (
-    <div style={{ textAlign: "center", padding: 50 }}>
+    <div className="thankyou-screen">
       <h2>Thank You for Joining the Queue!</h2>
       {position !== -1 ? (
         <p>
