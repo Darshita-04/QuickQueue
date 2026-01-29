@@ -1,16 +1,24 @@
-# React + Vite
+# QuickQueue 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuickQueue is a **digital queue management web application** built with **React** and **Firebase**, designed to help users avoid standing in physical queues. It allows users to join and manage queues digitally, providing a smooth, real-time, and convenient experience.
 
-Currently, two official plugins are available:
+The application is ideal for settings such as service centers, clinics, retail stores, or events where managing physical queues can be inefficient and time-consuming.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack
 
-## React Compiler
+- **Frontend:** React (Vite)
+- **Backend / Database:** Firebase (Firestore)
+- **Authentication:** Firebase Authentication
+- **Hosting:** Firebase Hosting
+- **Styling:** Custom CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Join queues digitally from any device
+- Real-time queue updates using Firebase
+- Secure user authentication
+- Add, update, and manage queue positions
+- Responsive UI for mobile and desktop
+- Fast and scalable architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
