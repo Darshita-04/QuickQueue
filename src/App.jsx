@@ -1,14 +1,27 @@
 import { Route, Routes } from 'react-router-dom'
 import UserForm from './pages/UserForm'
 import Home from './pages/Home'
-import ThankYou from './pages/ThankYou'
+// import ProtectedDashboard from './pages/ProtectedDashboard'
+import ProtectedRoute from './components/ProtectedRoute'
+import Signup from './pages/SignUp'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/checkin" element={<UserForm />} />
-      <Route path="/thankyou/:userId" element={<ThankYou />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
     </Routes>
   )
 }
