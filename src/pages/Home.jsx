@@ -1,6 +1,7 @@
 import { QRCodeCanvas } from "qrcode.react"
-
+import { auth } from "../../firebase-config";
 const Home = () => {
+  const user = auth.currentUser; // get logged-in company  
   return (
     <div className="qr-wrapper">
       <div>
@@ -8,7 +9,7 @@ const Home = () => {
         <p className="subheading">Join the queue instantly using your phone</p>
       </div>
       <div>
-        <div className="qr-canvas"><QRCodeCanvas size={300} value={'http://192.168.2.12:3000/checkin'} /></div>
+        <div className="qr-canvas"><QRCodeCanvas size={300} value={`/checkin/${user.uid}`} /></div>
       </div>
     </div>
   )

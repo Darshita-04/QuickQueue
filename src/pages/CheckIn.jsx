@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { addUserToQueue } from "../helpers/queue";
+import { useParams } from "react-router-dom";
 
-const UserForm = () => {
+const CheckIn = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   // const [tokenNumber, setTokenNumber] = useState(null);
+
+  const { companyId } = useParams()
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
@@ -15,7 +18,7 @@ const UserForm = () => {
     setError("");
 
     try {
-      const { success } = await addUserToQueue(name, phone);
+      const { success } = await addUserToQueue(name, phone, companyId);
       //setTokenNumber(tokenNumber); // store token number
       setSuccess(success);
       setName("");
@@ -53,7 +56,7 @@ const UserForm = () => {
   );
 };
 
-export default UserForm;
+export default CheckIn;
 
 
 

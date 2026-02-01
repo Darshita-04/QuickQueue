@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import UserForm from './pages/UserForm'
+import CheckIn from './pages/CheckIn'
 import Home from './pages/Home'
 // import ProtectedDashboard from './pages/ProtectedDashboard'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/checkin" element={<UserForm />} />
+      <Route path="/checkin/:companyId" element={<CheckIn />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route
